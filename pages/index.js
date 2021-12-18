@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from "next/image";
-import Home from "../assets/apples.jpg";
 import {Grid, Box, Paper} from '@mui/material';
 import {Button, Tag, Divider, Input, InputGroup, InputNumber, Sidenav, Nav, Dropdown} from "rsuite";
 import {getProducts} from "../state/actions/productAction";
@@ -96,22 +95,17 @@ const Index = () => {
                                 </Sidenav>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={10}>
+                        <Grid item xs={12} md={22}>
                             <br/>
                             <Grid container spacing={2} style={{padding:"20px"}}>
                                 {products?.map((product) => (
                                     <div key={product.id}>
-                                    <Grid item xs={3}>
+                                    <Grid item xs={6}>
                                         <Paper elevation={3} style={{padding:"10px"}}>
                                             <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>{product.rating.rate}</Tag>
                                             <Image src={product.image} alt="product"/>
                                             <h5>Price : $ {product.price}</h5>
                                             <h5>{product.title}</h5><br/>
-                                            <InputGroup style={{marginRight:"20px"}}>
-                                                <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                                <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                                <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                            </InputGroup>
                                         </Paper>
                                     </Grid>
                                     </div>
