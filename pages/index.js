@@ -3,15 +3,29 @@ import Image from "next/image";
 import Home from "../assets/apples.jpg";
 import {Grid, Box, Paper} from '@mui/material';
 import {Button, Tag, Divider, Input, InputGroup, InputNumber, Sidenav, Nav, Dropdown} from "rsuite";
+import {getProducts} from "../state/actions/productAction";
+import {useDispatch, useSelector} from "react-redux";
 
 const Index = () => {
     const [value, setValue] = React.useState(0);
+    const dispatch = useDispatch();
+    const productSelector = useSelector(state => state.productState)
+    const { orders } = productSelector;
+    console.log(orders);
+
     const handleMinus = () => {
         setValue(parseInt(value, 10) - 1);
     };
     const handlePlus = () => {
         setValue(parseInt(value, 10) + 1);
     };
+
+    React.useEffect(() => {
+        getProducts(dispatch).then(r => {
+            console.log(r)
+        })
+    }, [dispatch]);
+
     return (
         <div>
             <Grid container component="main" sx={{ marginTop:"-200px", height: '100vh' }}>

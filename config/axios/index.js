@@ -10,7 +10,7 @@ axiosConfig.defaults.headers = {
   'Content-Type': 'application/json',
 };
 
-axiosConfig.defaults.baseURL = `${process.env.NEXT_PUBLIC_TOPRATED_API_URL}/`;
+axiosConfig.defaults.baseURL = `${process.env.NEXT_PUBLIC_WAMU_API_URL}/`;
 
 internetConnectionInterceptor(axiosConfig);
 unAuthorizedInterceptor(axiosConfig);
