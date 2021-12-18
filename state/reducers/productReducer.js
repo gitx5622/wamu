@@ -25,7 +25,7 @@ export const productReducers = (
                 ...state,
                 isLoading: false,
                 isSuccess: true,
-                products: action.orders,
+                products: action.products,
             };
         }
         case GET_PRODUCTS_ERROR: {

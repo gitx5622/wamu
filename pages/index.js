@@ -99,7 +99,7 @@ const Index = () => {
                         <Grid item xs={12} md={10}>
                             <br/>
                             <Grid container spacing={2} style={{padding:"20px"}}>
-                                {products.map((product) => (
+                                {products?.map((product) => (
                                     <div key={product.id}>
                                     <Grid item xs={3}>
                                         <Paper elevation={3} style={{padding:"10px"}}>
