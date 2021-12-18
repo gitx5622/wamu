@@ -10,8 +10,7 @@ const Index = () => {
     const [value, setValue] = React.useState(0);
     const dispatch = useDispatch();
     const productSelector = useSelector(state => state.productState)
-    const { orders } = productSelector;
-    console.log(orders);
+    const { products } = productSelector;
 
     const handleMinus = () => {
         setValue(parseInt(value, 10) - 1);
@@ -100,112 +99,23 @@ const Index = () => {
                         <Grid item xs={12} md={10}>
                             <br/>
                             <Grid container spacing={2} style={{padding:"20px"}}>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
-                            </Grid>
-                            <Grid container spacing={2} style={{padding:"20px"}}>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <Paper elevation={3} style={{padding:"10px"}}>
-                                        <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>20%</Tag>
-                                        <Image src={Home} alt="product"/>
-                                        <h5>Price : $0.00</h5>
-                                        <h5>Apples</h5><br/>
-                                        <InputGroup style={{marginRight:"20px"}}>
-                                            <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
-                                            <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
-                                            <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
-                                        </InputGroup>
-                                    </Paper>
-                                </Grid>
+                                {products?.map((product) => (
+                                    <div key={product.id}>
+                                    <Grid item xs={3}>
+                                        <Paper elevation={3} style={{padding:"10px"}}>
+                                            <Tag style={{color: "white", margin:"10px", float:"right", background:"#009F7F"}}>{product.rating.rate}</Tag>
+                                            <Image src={product.image} alt="product"/>
+                                            <h5>Price : $ {product.price}</h5>
+                                            <h5>{product.title}</h5><br/>
+                                            <InputGroup style={{marginRight:"20px"}}>
+                                                <InputGroup.Button style={{background:"#009F7F"}} onClick={handleMinus}>-</InputGroup.Button>
+                                                <center><InputNumber className={'custom-input-number'} value={value} onChange={setValue} /></center>
+                                                <InputGroup.Button onClick={handlePlus} style={{background:"#009F7F"}}>+</InputGroup.Button>
+                                            </InputGroup>
+                                        </Paper>
+                                    </Grid>
+                                    </div>
+                                ))}
                             </Grid>
                         </Grid>
                     </Grid>

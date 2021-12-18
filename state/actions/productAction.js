@@ -12,7 +12,7 @@ export const getProducts = async (dispatch) => {
             .then(response => {
                 dispatch({
                     type: GET_PRODUCTS_SUCCESS,
-                    orders: response.data,
+                    products: response.data,
                 });
                 return response;
             });

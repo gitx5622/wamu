@@ -5,7 +5,7 @@ export const initialOrdersState = {
     isError: false,
     isSuccess: false,
     errorMessage: '',
-    orders: [],
+    products: [],
 }
 
 export const productReducers = (
@@ -25,7 +25,7 @@ export const productReducers = (
                 ...state,
                 isLoading: false,
                 isSuccess: true,
-                orders: action.orders,
+                products: action.orders,
             };
         }
         case GET_PRODUCTS_ERROR: {
